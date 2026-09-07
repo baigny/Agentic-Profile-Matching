@@ -54,6 +54,13 @@ responsibilities. See [PLAN.md](PLAN.md) for the assignment breakdown this was b
 See [eval/test_scenarios.md](eval/test_scenarios.md) — 7 scripted conversation flows
 (initial search, refinement, compare, explain, full 3-round screening, ambiguous JD, end session).
 
+## Performance note
+`llama3.1` running on CPU (no GPU) generates roughly 3-8 tokens/sec here. `extract_requirements`
+takes ~60-90s; round-2 `compare_candidates` over a 10-candidate shortlist can take several
+minutes since it generates a longer comparison. This is inference speed, not a hang — expected
+tradeoff for the no-cost local-only requirement. A GPU-backed Ollama host or a smaller model
+would cut this significantly.
+
 ## Demo video
 Manual step, not automated — 5-6 min screen capture showing a full 3-round screening,
 one refinement round-trip, and one explain-ranking question with agent reasoning visible.

@@ -30,8 +30,19 @@ def main():
     thread_id = str(uuid.uuid4())
     config = new_thread_config(thread_id)
 
-    print("Paste the job description (single line or use a text file's contents), then Enter:")
-    jd_text = input("> ").strip()
+    print("Paste the job description (multi-line OK), then an empty line to finish:")
+    lines = []
+    while True:
+        try:
+            line = input()
+        except EOFError:
+            break
+        if not line.strip() and lines:
+            break
+        if not line.strip():
+            continue
+        lines.append(line)
+    jd_text = "\n".join(lines).strip()
     if not jd_text:
         print("No job description given, exiting.")
         return
