@@ -20,8 +20,11 @@ stateDiagram-v2
 - **extract_requirements** — LLM call, splits JD into `must_have` / `nice_to_have`.
 - **search_resumes** — hybrid semantic+keyword search (`ai/job_matcher.py`, ported from Milestone 2) against ChromaDB, top-10 for round 1.
 - **rank_candidates** — sorts `candidate_pool` by `match_score` into `shortlist`.
-- **generate_report** — round-dependent: round 1 = ranked list + reasoning, round 2 = LLM head-to-head deep analysis of the shortlist, round 3 = hire/no-hire recommendation + interview questions for the top candidate.
-- **human_feedback** — `interrupt()`s the graph for real user input, classifies intent (REFINE / NEXT_ROUND / COMPARE / EXPLAIN / END) via LLM, routes accordingly. COMPARE/EXPLAIN are answered inline without leaving this node.
+- **generate_report** — round-dependent: round 1 = ranked list + reasoning + a ranking-change
+  explanation (if this report followed a REFINE) + improvement suggestions for the bottom 2
+  ("borderline") candidates, round 2 = LLM head-to-head deep analysis of the shortlist, round 3
+  = hire/no-hire recommendation + interview questions for the top candidate.
+- **human_feedback** — `interrupt()`s the graph for real user input, classifies intent (REFINE / NEXT_ROUND / COMPARE / EXPLAIN / END) via LLM, routes accordingly. COMPARE/EXPLAIN are answered inline without leaving this node; both resolve which candidates the user means by name first, falling back to ordinal rank ("compare the top 3") against the already rank-ordered shortlist.
 
 ## Screening rounds
 | round | trigger | behavior |

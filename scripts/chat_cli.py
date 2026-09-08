@@ -30,17 +30,21 @@ def main():
     thread_id = str(uuid.uuid4())
     config = new_thread_config(thread_id)
 
-    print("Paste the job description (multi-line OK), then an empty line to finish:")
+    print("Paste the job description (multi-line OK, blank lines within it are fine),")
+    print("then an empty line twice (or Ctrl-D) to finish:")
     lines = []
+    blank_run = 0
     while True:
         try:
             line = input()
         except EOFError:
             break
-        if not line.strip() and lines:
-            break
         if not line.strip():
+            blank_run += 1
+            if lines and blank_run >= 2:
+                break
             continue
+        blank_run = 0
         lines.append(line)
     jd_text = "\n".join(lines).strip()
     if not jd_text:
@@ -62,7 +66,12 @@ def main():
             break
 
         prompt_text = interrupts[0].value.get("question", "Your response:")
-        user_reply = input(f"\n{prompt_text}\n> ").strip()
+        try:
+            user_reply = input(f"\n{prompt_text}\n> ").strip()
+        except EOFError:
+            print("\n[SESSION ENDED]")
+            break
+        print(f"[YOU] {user_reply}")
 
         for event in graph.stream(Command(resume=user_reply), config=config):
             pass

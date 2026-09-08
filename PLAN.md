@@ -14,7 +14,7 @@ Third project in series: `LLM-Powered-File-System-Assistant` (Milestone 1, singl
 - Iterative refinement mid-conversation: adjust criteria, re-rank, explain what changed and why.
 
 **Part C — Advanced Capabilities (30%)**
-- Multi-round screening: round 1 top-10 from full pool, round 2 deep analysis of the 10, round 3 hire/no-hire recommendation.
+- Multi-round screening: round 1 top-10 from the full pool (32 resumes, scaled down from the assignment's illustrative "100" to a set actually curated/verifiable here), round 2 deep analysis of the 10, round 3 hire/no-hire recommendation.
 - Explainability: detailed match reports, strengths/gaps per candidate, improvement suggestions for borderline candidates.
 
 **Submission**

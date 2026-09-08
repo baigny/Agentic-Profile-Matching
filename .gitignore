@@ -3,5 +3,4 @@ __pycache__/
 *.pyc
 chroma_db/
 output/*
-!output/.gitkeep
 .env

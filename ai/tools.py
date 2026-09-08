@@ -17,7 +17,10 @@ from langchain_ollama import ChatOllama
 from ai import job_matcher
 from backend import fs_tools
 
-MODEL = "llama3.1"
+# llama3.2:3b instead of llama3.1 (8B) - much faster on CPU, small quality tradeoff.
+# extract_requirements' JSON parsing already fails soft (falls back to empty
+# must_have/nice_to_have) if the smaller model's output isn't valid JSON.
+MODEL = "llama3.2:3b"
 _llm = ChatOllama(model=MODEL, temperature=0)
 
 
@@ -85,9 +88,11 @@ def compare_candidates(candidate_ids: list[str], candidate_pool: list[dict]) -> 
                 f"reasoning: {c.get('reasoning', '')}"
             )
         prompt = (
-            "Compare these candidates head-to-head for the same role. For each, state "
-            "strengths and gaps relative to the others, then give a one-sentence verdict "
-            "on who is stronger and why.\n\n" + "\n\n".join(summary_blocks)
+            "Compare these candidates head-to-head for the same role. For each candidate, "
+            "state their strengths and gaps relative to the others - do NOT give a verdict "
+            "per candidate. After ALL candidates are covered, end your reply with exactly one "
+            "final section titled 'Verdict:' naming the single strongest candidate and why.\n\n"
+            + "\n\n".join(summary_blocks)
         )
         response = _llm.invoke(prompt)
         return {"success": True, "comparison": response.content}
@@ -114,6 +119,40 @@ def generate_interview_questions(candidate_id: str, candidate_pool: list[dict], 
         )
         response = _llm.invoke(prompt)
         return {"success": True, "questions": response.content}
+    except Exception as e:
+        return {"success": False, "error": str(e)}
+
+
+@tool
+def suggest_improvements(candidate_ids: list[str], candidate_pool: list[dict], jd_text: str = "") -> dict:
+    """For one or more borderline candidates, suggest concrete ways each could become a
+    stronger fit for the job description - grounded in their actual resume gaps, not
+    generic advice. Batches all candidates into a single LLM call."""
+    try:
+        picked = [_find_candidate(candidate_pool, cid) for cid in candidate_ids]
+        missing = [cid for cid, c in zip(candidate_ids, picked) if c is None]
+        if missing:
+            return {"success": False, "error": f"Candidate(s) not found in pool: {missing}"}
+
+        blocks = []
+        for c in picked:
+            resume_text = _resume_text(c["resume_path"])
+            blocks.append(
+                f"=== {c['candidate_name']} (score {c.get('match_score', 'N/A')}/100, "
+                f"matched skills: {c.get('matched_skills', [])}) ===\n{resume_text}"
+            )
+        prompt = (
+            "\n\n".join(blocks) + "\n\n"
+            + (f"Job description:\n{jd_text}\n\n" if jd_text else "")
+            + "Each candidate above is borderline for this role - matched some but not all "
+            "required skills. For EACH candidate, write 3 concrete, specific suggestions for "
+            "how they could become a stronger fit (skills to gain, experience to build, "
+            "certifications to pursue), grounded in an actual gap between their resume and "
+            "the job description - not generic career advice. Group your answer under each "
+            "candidate's name as a heading, numbered 1-3 under each."
+        )
+        response = _llm.invoke(prompt)
+        return {"success": True, "suggestions": response.content}
     except Exception as e:
         return {"success": False, "error": str(e)}
 
@@ -147,6 +186,7 @@ TOOLS = [
     extract_requirements,
     compare_candidates,
     generate_interview_questions,
+    suggest_improvements,
     read_file,
     list_files,
     write_file,

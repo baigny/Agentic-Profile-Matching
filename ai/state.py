@@ -24,7 +24,7 @@ class Requirements(TypedDict, total=False):
     nice_to_have: list
 
 
-class AgentState(TypedDict):
+class AgentState(TypedDict, total=False):
     messages: Annotated[list, add_messages]
     jd_text: str
     requirements: Requirements
@@ -32,3 +32,5 @@ class AgentState(TypedDict):
     shortlist: list[Candidate]
     round: int
     last_action: str
+    min_years: int
+    prior_shortlist: list[Candidate]
