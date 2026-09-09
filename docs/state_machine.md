@@ -11,7 +11,7 @@ stateDiagram-v2
 
     human_feedback --> extract_requirements: REFINE (new criteria, round resets to 1)
     human_feedback --> generate_report: NEXT_ROUND (round 2 deep-dive / round 3 hire recommendation)
-    human_feedback --> human_feedback: COMPARE / EXPLAIN (answered inline, asks again)
+    human_feedback --> human_feedback: COMPARE / EXPLAIN / INTERVIEW_QUESTIONS (answered inline, asks again)
     human_feedback --> [*]: END (user satisfied / done)
 ```
 
@@ -24,7 +24,7 @@ stateDiagram-v2
   explanation (if this report followed a REFINE) + improvement suggestions for the bottom 2
   ("borderline") candidates, round 2 = LLM head-to-head deep analysis of the shortlist, round 3
   = hire/no-hire recommendation + interview questions for the top candidate.
-- **human_feedback** — `interrupt()`s the graph for real user input, classifies intent (REFINE / NEXT_ROUND / COMPARE / EXPLAIN / END) via LLM, routes accordingly. COMPARE/EXPLAIN are answered inline without leaving this node; both resolve which candidates the user means by name first, falling back to ordinal rank ("compare the top 3") against the already rank-ordered shortlist.
+- **human_feedback** — `interrupt()`s the graph for real user input, classifies intent (REFINE / NEXT_ROUND / COMPARE / EXPLAIN / INTERVIEW_QUESTIONS / END) via LLM, routes accordingly. COMPARE/EXPLAIN/INTERVIEW_QUESTIONS are answered inline without leaving this node. COMPARE/EXPLAIN resolve which candidates the user means by name first, falling back to ordinal rank ("compare the top 3") against the already rank-ordered shortlist; INTERVIEW_QUESTIONS resolves a single candidate the same way ("generate interview questions for the top candidate" / by name).
 
 ## Screening rounds
 | round | trigger | behavior |

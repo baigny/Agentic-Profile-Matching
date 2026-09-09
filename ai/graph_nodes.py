@@ -21,7 +21,7 @@ ROUND1_TOP_N = 10
 BORDERLINE_COUNT = 2  # bottom-N of the round-1 shortlist get improvement suggestions
 _llm = ChatOllama(model="llama3.2:3b", temperature=0)
 
-INTENT_LABELS = {"END", "NEXT_ROUND", "REFINE", "COMPARE", "EXPLAIN"}
+INTENT_LABELS = {"END", "NEXT_ROUND", "REFINE", "COMPARE", "EXPLAIN", "INTERVIEW_QUESTIONS"}
 
 
 def parse_jd(state):
@@ -122,10 +122,26 @@ def _round1_report(state):
     return "\n".join(lines)
 
 
+def _deterministic_verdict(shortlist):
+    """The LLM's own closing verdict can contradict its pairwise strengths/gaps text once
+    the shortlist gets large (observed: it dropped the actual top scorer from its own summary).
+    Replace it with a verdict grounded in the state's score-ranked shortlist, which round 3
+    already trusts over any round-2 free text."""
+    if not shortlist:
+        return "Verdict: no candidates to recommend."
+    top = shortlist[0]
+    return (
+        f"Verdict: {top['candidate_name']} is the strongest candidate overall "
+        f"(score {top['match_score']}/100 - {top.get('reasoning', '')})"
+    )
+
+
 def _round2_report(state):
     ids = [c["candidate_name"] for c in state["shortlist"]]
     result = compare_candidates.invoke({"candidate_ids": ids, "candidate_pool": state["shortlist"]})
     comparison = result["comparison"] if result["success"] else result.get("error", "comparison failed")
+    comparison = re.split(r"\n?\s*Verdict:", comparison, maxsplit=1, flags=re.IGNORECASE)[0].rstrip()
+    comparison += "\n\n" + _deterministic_verdict(state["shortlist"])
     return f"Round 2 - deep analysis of the top {len(ids)}:\n\n{comparison}"
 
 
@@ -209,14 +225,29 @@ def _resolve_candidates(text, pool):
     return named
 
 
+def _resolve_single_candidate(text, pool):
+    """Resolve which single shortlist candidate the user means: named mention first,
+    falling back to ordinal rank ('the top candidate' -> pool[0], 'the #2 candidate' -> pool[1])."""
+    named = _mentioned_candidates(text, pool)
+    if named:
+        return named[0]
+    if pool and re.search(r"\btop\b", text.lower()):
+        n = _ordinal_count(text) or 1
+        if 1 <= n <= len(pool):
+            return pool[n - 1]["candidate_name"]
+    return None
+
+
 def _classify_intent(user_text):
     prompt = (
-        "Classify the user's request into exactly one label: END, NEXT_ROUND, REFINE, COMPARE, EXPLAIN.\n"
+        "Classify the user's request into exactly one label: "
+        "END, NEXT_ROUND, REFINE, COMPARE, EXPLAIN, INTERVIEW_QUESTIONS.\n"
         "END = satisfied, done, thanks, stop.\n"
         "NEXT_ROUND = wants deeper analysis, next screening round, or a hire recommendation.\n"
         "REFINE = wants to change search criteria (skills, years, seniority) and re-search.\n"
         "COMPARE = wants a head-to-head comparison of specific named candidates.\n"
         "EXPLAIN = asks why one candidate ranked above/below another.\n"
+        "INTERVIEW_QUESTIONS = asks for interview or screening questions for a specific candidate.\n"
         f"User message: {user_text}\n"
         "Reply with only the label, nothing else."
     )
@@ -268,6 +299,19 @@ def human_feedback(state):
         else:
             result = compare_candidates.invoke({"candidate_ids": ids, "candidate_pool": state["shortlist"]})
             answer = result["comparison"] if result["success"] else result.get("error", "comparison failed")
+        return {"messages": new_messages + [AIMessage(content=answer)], "last_action": "answered"}
+
+    if intent == "INTERVIEW_QUESTIONS":
+        candidate_id = _resolve_single_candidate(user_text, state.get("shortlist", []))
+        if not candidate_id:
+            answer = "Name a candidate (or say 'the top candidate') from the shortlist to generate interview questions for."
+        else:
+            result = generate_interview_questions.invoke({
+                "candidate_id": candidate_id,
+                "candidate_pool": state["shortlist"],
+                "jd_text": state.get("jd_text", ""),
+            })
+            answer = result["questions"] if result["success"] else result.get("error", "question generation failed")
         return {"messages": new_messages + [AIMessage(content=answer)], "last_action": "answered"}
 
     return {"messages": new_messages, "last_action": "end"}

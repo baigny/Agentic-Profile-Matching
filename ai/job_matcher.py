@@ -16,9 +16,12 @@ MIN_MUST_HAVE_MATCHES = 1  # candidates matching fewer JD skills than this are d
 
 
 def _normalize(text):
-    """Lowercase and strip everything but letters/digits, so punctuation/spacing
-    variants (CI/CD vs ci-cd vs CICD) collapse to the same token stream."""
-    return re.sub(r"[^a-z0-9]", "", text.lower())
+    """Tokenize on word boundaries and rejoin with '|' delimiters, so punctuation/spacing
+    variants (CI/CD vs ci-cd vs CICD) collapse to the same token stream while a short skill
+    like 'EE' can no longer substring-match inside an unrelated word like 'need' - matching
+    now requires the skill's own token sequence to appear as whole, adjacent tokens."""
+    tokens = re.findall(r"[a-z0-9]+", text.lower())
+    return "|" + "|".join(tokens) + "|"
 
 
 def jd_must_have_skills(jd_text, candidate_skills):
