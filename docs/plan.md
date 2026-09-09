@@ -59,13 +59,12 @@ Agentic-Profile-Matching/
 ├── chroma_db/                     # copied from RAG-Based-Profile-Matching (gitignored after copy)
 ├── scripts/
 │   └── chat_cli.py                # interactive CLI chat entrypoint
-├── eval/
-│   └── test_scenarios.md           # 5+ conversation flow scripts + expected behavior
 ├── docs/
-│   └── state_machine.md            # mermaid diagram of the LangGraph graph
+│   ├── plan.md                      # this file
+│   ├── state_machine.md            # mermaid diagram of the LangGraph graph
+│   └── test_scenarios.md           # 5+ conversation flow scripts + expected behavior + fix log
 ├── output/                         # match reports, session transcripts (gitignored contents)
 ├── requirements.txt
-├── PLAN.md
 ├── README.md
 └── .gitignore
 ```
@@ -104,11 +103,12 @@ Nodes matching the required flow:
 - Handles the three required interaction types: initial JD-based search, mid-conversation refinement ("only React, 3+ years"), explain-a-ranking question ("why did X rank higher").
 
 ## Phase 6 — Eval / test scenarios
-- `eval/test_scenarios.md`: 5+ scripted conversations covering — initial broad search, refinement changing rank order, compare-candidates request, interview-question generation, full 3-round screening to hire/no-hire, one ambiguous/under-specified request.
+- `docs/test_scenarios.md`: 5+ scripted conversations covering — initial broad search, refinement changing rank order, compare-candidates request, interview-question generation, full 3-round screening to hire/no-hire, one ambiguous/under-specified request.
 - Run each manually through `chat_cli.py`, record transcript + pass/fail against expected behavior.
 
 ## Phase 7 — Docs
 - `docs/state_machine.md`: mermaid diagram of the graph (nodes + conditional edges + loop-back).
+- `docs/plan.md`: this file — assignment breakdown and build plan.
 - `README.md`: setup, architecture vs. Milestone 1/2, how to run chat CLI, example transcripts, eval summary.
 
 ## Phase 8 — Demo video
