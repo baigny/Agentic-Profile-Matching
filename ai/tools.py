@@ -20,8 +20,10 @@ from backend import fs_tools
 # llama3.2:3b instead of llama3.1 (8B) - much faster on CPU, small quality tradeoff.
 # extract_requirements' JSON parsing already fails soft (falls back to empty
 # must_have/nice_to_have) if the smaller model's output isn't valid JSON.
+# num_predict caps generation length so a large shortlist (round-2 compare_candidates
+# over 10 candidates) can't run away into a very long response.
 MODEL = "llama3.2:3b"
-_llm = ChatOllama(model=MODEL, temperature=0)
+_llm = ChatOllama(model=MODEL, temperature=0, num_predict=700)
 
 
 def _resume_text(resume_path):
@@ -88,10 +90,13 @@ def compare_candidates(candidate_ids: list[str], candidate_pool: list[dict]) -> 
                 f"reasoning: {c.get('reasoning', '')}"
             )
         prompt = (
-            "Compare these candidates head-to-head for the same role. For each candidate, "
-            "state their strengths and gaps relative to the others - do NOT give a verdict "
-            "per candidate. After ALL candidates are covered, end your reply with exactly one "
-            "final section titled 'Verdict:' naming the single strongest candidate and why.\n\n"
+            "Evaluate each candidate below for the same role. For EACH candidate, one heading "
+            "with their name followed by ONE short paragraph (2-3 sentences) giving their "
+            "strengths and gaps relative to the job requirements. Do NOT repeat pairwise "
+            "comparisons or restate another candidate's info under each heading, and do NOT "
+            "give a verdict per candidate. After ALL candidates are covered, end your reply "
+            "with exactly one final section titled 'Verdict:' naming the single strongest "
+            "candidate and why.\n\n"
             + "\n\n".join(summary_blocks)
         )
         response = _llm.invoke(prompt)
