@@ -18,7 +18,7 @@ this one (Milestone 3, LangGraph agent with human-in-the-loop and multi-round sc
 - **Ollama `llama3.2:3b`**, local, no API key, no cost — used for `extract_requirements`,
   `compare_candidates`, `generate_interview_questions`, `suggest_improvements`, and intent
   classification. Switched from `llama3.1` (8B) partway through for CPU inference speed —
-  see `eval/test_scenarios.md`'s "Post-scenario fixes" for the before/after timing.
+  see `docs/test_scenarios.md`'s fix log for details.
 - **ChromaDB** — vector store, reused unmodified from `RAG-Based-Profile-Matching`.
 - **sentence-transformers** (`all-MiniLM-L6-v2`) — local embeddings, no API key.
 - **LangGraph** — the agent graph, checkpointed with `MemorySaver` so `interrupt()`/`Command(resume=...)`
@@ -44,6 +44,8 @@ rank_candidates -> generate_report`, then pauses and asks what's next. Reply wit
 - "compare Jane Doe and John Smith" or "compare the top 3" — inline head-to-head comparison,
   by name or by rank.
 - "why did Jane rank higher than John" — inline ranking explanation.
+- "generate interview questions for the top candidate" (or by name) — inline, on demand,
+  independent of round (also generated automatically for the top pick in round 3).
 - "next round" — advances screening (round 2 deep analysis, round 3 hire recommendation).
 - "that's all, thanks" — ends the session.
 
@@ -52,7 +54,7 @@ the shortlist (borderline explainability), grounded in their actual resume gaps.
 
 ## Architecture
 See [docs/state_machine.md](docs/state_machine.md) for the full graph diagram and node
-responsibilities. See [PLAN.md](PLAN.md) for the assignment breakdown this was built against.
+responsibilities. See [docs/plan.md](docs/plan.md) for the assignment breakdown this was built against.
 
 ## Reused from prior milestones (unmodified)
 - `backend/fs_tools.py`, `backend/embeddings.py`, `backend/vector_store.py`,
@@ -60,15 +62,23 @@ responsibilities. See [PLAN.md](PLAN.md) for the assignment breakdown this was b
 - `ai/job_matcher.py` — hybrid (0.6 semantic / 0.4 keyword) scoring, powers the `search_resumes` tool.
 
 ## Test scenarios
-See [eval/test_scenarios.md](eval/test_scenarios.md) — 7 scripted conversation flows
-(initial search, refinement, compare, explain, full 3-round screening, ambiguous JD, end session).
+See [docs/test_scenarios.md](docs/test_scenarios.md) — 7 scripted conversation flows
+(initial search, refinement, compare, explain, full 3-round screening, ambiguous JD, end session),
+plus a fix log and known limitations for issues found while running them.
+
+Run them automatically end-to-end (no manual typing) with:
+```
+python scripts/run_scenarios.py
+```
+Saves a transcript per scenario to `output/`.
 
 ## Performance note
-`llama3.1` running on CPU (no GPU) generates roughly 3-8 tokens/sec here. `extract_requirements`
-takes ~60-90s; round-2 `compare_candidates` over a 10-candidate shortlist can take several
-minutes since it generates a longer comparison. This is inference speed, not a hang — expected
-tradeoff for the no-cost local-only requirement. A GPU-backed Ollama host or a smaller model
-would cut this significantly.
+`llama3.2:3b` running on CPU (no GPU) is slow at scale. Round 1 (`extract_requirements` +
+`search_resumes`) takes under a minute. Round 2's `compare_candidates` reasons over all 10
+shortlisted candidates in a single call and is the slow step — measured end-to-end (round 1
+through round 3, via `scripts/run_scenarios.py`) at ~8 minutes for the `multi_round_screening`
+scenario. This is inference speed, not a hang — expected tradeoff for the no-cost local-only
+requirement. A GPU-backed Ollama host would cut this significantly.
 
 ## Demo video
 Manual step, not automated — 5-6 min screen capture showing a full 3-round screening,
