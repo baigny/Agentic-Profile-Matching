@@ -10,7 +10,6 @@ Usage:
 """
 import os
 import sys
-from datetime import date
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
@@ -118,7 +117,7 @@ def main():
             continue
         print(f"Running scenario: {name} ...")
         transcript = run_scenario(name, SCENARIOS[name])
-        out_path = os.path.join(OUTPUT_DIR, f"auto_{name}_{date.today().isoformat()}.txt")
+        out_path = os.path.join(OUTPUT_DIR, f"auto_{name}.txt")
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(transcript)
         print(f"  saved: {out_path}")

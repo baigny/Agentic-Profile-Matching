@@ -7,7 +7,7 @@ ChromaDB index — no mocks. Full transcripts are in `output/`.
 
 `scripts/run_scenarios.py` automates six of these seven flows (session-end is exercised as the
 final turn of each) end to end against the real compiled graph, and writes a fresh transcript to
-`output/auto_<scenario>_<date>.txt` on every run:
+`output/auto_<scenario>.txt` (overwritten) on every run:
 ```
 python scripts/run_scenarios.py                  # all scenarios
 python scripts/run_scenarios.py compare explain   # a subset
