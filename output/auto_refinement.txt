@@ -103,13 +103,13 @@ Borderline candidates - improvement suggestions:
 
 1. To strengthen her fit for the role, Katherine should gain experience with asynchronous programming using libraries such as Celery or Zato. This would help her develop skills in handling high-traffic applications and improve her ability to design and implement scalable backend services.
 2. Katherine should build experience with continuous integration and continuous deployment (CI/CD) pipelines using tools like Jenkins or GitLab CI/CD. This would enable her to automate testing, deployment, and monitoring of her backend services, ensuring faster time-to-market and reduced downtime.
-3. Katherine should pursue a certification in cloud security best practices, such as the AWS Certified Security - Specialty certification. This would demonstrate her expertise in securing cloud-based applications and ensure she meets the additional requirement for AWS experience.
+3. Katherine should pursue a certification in cloud security best practices and compliance requirements for AWS. This would demonstrate her commitment to staying up-to-date with industry standards and best practices, and would be a valuable asset in her application for the role.
 
 **KAYLA R. WYNTON**
 
-1. To strengthen her fit for the role, Kayla should focus on developing her skills in Python and Django, particularly in areas such as asynchronous programming and web development frameworks. This would help her improve her ability to design and implement high-performance, scalable backend services.
-2. Kayla should build experience with PostgreSQL database performance optimization and ensure she has a strong understanding of database design and schema management. This would enable her to optimize database performance and ensure data consistency in her backend services.
-3. Kayla should pursue a certification in cloud security, such as the AWS Certified Developer - Associate certification. This would demonstrate her expertise in cloud-based development and ensure she meets the additional requirement for AWS experience.
+1. To strengthen her fit for the role, Kayla should focus on developing her skills in Python and Django, particularly in areas such as asynchronous programming and web development frameworks. This would help her develop a deeper understanding of the technologies used in the role and improve her ability to design and implement high-performance backend services.
+2. Kayla should gain experience with PostgreSQL database performance optimization and data consistency. This would enable her to work more effectively with the database team and ensure that her backend services are optimized for performance and reliability.
+3. Kayla should pursue a certification in cloud security, such as AWS Certified Security - Specialty. This would demonstrate her commitment to staying up-to-date with industry standards and best practices, and would be a valuable asset in her application for the role.
 
 [YOU] thanks, that's all
 [SESSION ENDED]

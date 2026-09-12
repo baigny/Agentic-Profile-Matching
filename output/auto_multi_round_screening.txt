@@ -58,14 +58,14 @@ Borderline candidates - improvement suggestions:
 **KAIDEN JENKINS**
 
 1. **Gain experience with containerization and orchestration tools**: While Kaiden has experience with Docker and Kubernetes, the job description mentions containerization and orchestration tools as a nice-to-have. To become a stronger fit, Kaiden could take online courses or attend workshops to learn more about tools like Docker Swarm, Kubernetes, or Rancher. This would help him better understand how to deploy and manage containerized applications.
-2. **Develop expertise in continuous integration and continuous deployment (CI/CD) pipelines**: Kaiden's experience with Jenkins is mentioned in his skills section, but the job description highlights the importance of CI/CD pipelines. To address this gap, Kaiden could explore tools like GitLab CI/CD, CircleCI, or Jenkinsfile, and practice building and managing CI/CD pipelines for his personal projects or contributions to open-source projects.
-3. **Pursue a certification in cloud-based machine learning platforms**: Kaiden's experience with AWS is mentioned, but the job description mentions cloud-based machine learning platforms as a nice-to-have. To become a stronger fit, Kaiden could pursue a certification like AWS Certified Machine Learning - Specialty or Google Cloud Certified - Professional Machine Learning Engineer. This would demonstrate his expertise in cloud-based machine learning platforms and make him a more competitive candidate.
+2. **Develop expertise in continuous integration and continuous deployment (CI/CD) pipelines**: Kaiden's experience with Jenkins is a plus, but the job description emphasizes the importance of CI/CD pipelines. To address this gap, Kaiden could explore tools like GitLab CI/CD, CircleCI, or Jenkinsfile, and practice building and managing CI/CD pipelines for his own projects.
+3. **Pursue a certification in cloud-based machine learning platforms**: Kaiden's experience with AWS is mentioned in his skills section, but the job description highlights the importance of cloud-based machine learning platforms. To become a stronger fit, Kaiden could pursue a certification like AWS Certified Machine Learning - Specialty or Google Cloud Certified - Professional Machine Learning Engineer, which would demonstrate his expertise in cloud-based machine learning platforms.
 
 **KATHERINE ALEXANDRA VALENTINE**
 
-1. **Gain experience with MLOps tools and methodologies**: While Katherine has experience with PyTorch and Python, the job description highlights the importance of MLOps tools and methodologies. To address this gap, Katherine could explore tools like TensorFlow Serving, AWS SageMaker, or H2O.ai Driverless AI, and practice building and deploying machine learning models using these tools.
-2. **Develop expertise in natural language processing (NLP) pipelines**: Katherine's experience with NLP is mentioned in her skills section, but the job description highlights the importance of developing and maintaining NLP pipelines. To become a stronger fit, Katherine could explore libraries and frameworks like NLTK, spaCy, or Stanford CoreNLP, and practice building and deploying NLP pipelines for her personal projects or contributions to open-source projects.
-3. **Pursue a certification in machine learning engineering**: Katherine's Ph.D. in Computer Science is mentioned, but the job description highlights the importance of machine learning engineering certifications. To become a stronger fit, Katherine could pursue a certification like Certified Machine Learning Engineer (CMLE) or Certified Data Scientist (CDS). This would demonstrate her expertise in machine learning engineering and make her a more competitive candidate.
+1. **Gain experience with MLOps tools and methodologies**: While Katherine has experience with PyTorch and Python, the job description emphasizes the importance of MLOps tools and methodologies. To address this gap, Katherine could explore tools like TensorFlow Serving, AWS SageMaker, or H2O.ai Driverless AI, and practice building and deploying machine learning models using these tools.
+2. **Develop expertise in natural language processing (NLP) pipelines**: Katherine's experience with NLP is mentioned in her skills section, but the job description highlights the importance of developing and maintaining NLP pipelines. To become a stronger fit, Katherine could explore libraries and frameworks like NLTK, spaCy, or Stanford CoreNLP, and practice building and deploying NLP pipelines for her own projects.
+3. **Pursue a certification in machine learning engineering**: Katherine's Ph.D. in Computer Science is a strong foundation, but the job description emphasizes the importance of machine learning engineering certifications. To become a stronger fit, Katherine could pursue a certification like Certified Machine Learning Engineer (CMLE) or Certified Data Scientist (CDS), which would demonstrate her expertise in machine learning engineering.
 
 [YOU] next round
 
@@ -76,7 +76,7 @@ Round 2 - deep analysis of the top 10:
 Katherine Wylde has a strong foundation in cloud computing, containerization, and deployment, with 10 years of experience. Her skills in Agile Methodologies and Python are also well-matched to the job requirements. However, her skills in GCP and TensorFlow are not as strongly represented as other candidates.
 
 **ZACHARY J. WYNTON**
-Zachary J. Wynton has a solid set of skills in cloud computing, containerization, and deployment, with 8 years of experience. His education section highlights his knowledge of CD, CI, and containerization. However, his skills in Agile Methodologies and Python are not as strongly represented as other candidates.
+Zachary J. Wynton has a solid set of skills in cloud computing, containerization, and deployment, with 8 years of experience. His education section highlights his expertise in CD, CI, and containerization. However, his skills in Agile Methodologies and Python are not as strongly represented as other candidates.
 
 **KAILYN J. RYAN**
 Kailyn J. Ryan has a good set of skills in cloud computing, deployment, and containerization, with 5 years of experience. Her skills in Python and TensorFlow are also well-matched to the job requirements. However, her skills in AWS and Agile Methodologies are not as strongly represented as other candidates.
@@ -94,13 +94,15 @@ Katherine L. Wynton has a good set of skills in cloud computing, containerizatio
 Kyle Ryder has a solid set of skills in cloud computing, containerization, and deployment, with 10 years of experience. His skills in AWS, CD, and CI are well-matched to the job requirements. However, his skills in GCP and Python are not as strongly represented as other candidates.
 
 **KEVIN J. MULLEN**
-Kevin J. Mullen has a good set of skills in cloud computing and containerization, with 12 years of experience. His skills in Agile Methodologies and Python are also well-matched to the job requirements. However, his skills in GCP and Kubernetes are not as strongly represented as other candidates.
+Kevin J. Mullen has a good set of skills in cloud computing, containerization, and Python, with 12 years of experience. However, his skills in Agile Methodologies and Kubernetes are not as strongly represented as other candidates.
 
 **KAIDEN JENKINS**
-Kaiden Jenkins has a strong foundation in cloud computing and deployment, with 14 years of experience. His skills in AWS, Docker, and Kubernetes are well-matched to the job requirements. However, his skills in Agile Methodologies and Python are not as strongly represented as other candidates.
+Kaiden Jenkins has a solid set of skills in cloud computing, deployment, and containerization, with 14 years of experience. However, his skills in AWS, Agile Methodologies, and Python are not as strongly represented as other candidates.
 
 **KATHERINE ALEXANDRA VALENTINE**
-Katherine Alexandra Valentine has a limited set of skills in deep learning and machine learning, with 8 years of experience. Her skills in PyTorch, Python, and TensorFlow are not as strongly represented as other
+Katherine Alexandra Valentine has a limited set of skills in deep learning, with 8 years of experience. Her skills in PyTorch, Python, and TensorFlow are not as strongly represented as other candidates.
+
+**
 
 Verdict: KATHERINE WYLDE is the strongest candidate overall (score 80.6/100 - Matches 12/19 required skills (AWS, Agile Methodologies, Agile methodologies, Deployment, Docker, GCP, Kubernetes, PyTorch, Python, TensorFlow, deployment, frameworks), supported by the EXPERIENCE, SKILLS, SUMMARY section(s). Candidate has 10 years of experience.)
 

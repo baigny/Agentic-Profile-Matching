@@ -76,15 +76,11 @@ Borderline candidates - improvement suggestions:
 [AGENT]
 **ZACHARY J. WYNTON**
 
-Zachary J. Wynton has a strong foundation in cloud computing, containerization, and orchestration, with a high match rate of 16/21 required skills. His 8 years of experience in the field demonstrate his ability to apply his skills in real-world scenarios. However, his skills in specific areas like Django and PostgreSQL are not as well-represented in his profile.
+Zachary J. Wynton has a strong foundation in cloud computing, containerization, and orchestration, with a high match rate of 16/21 required skills. His 8 years of experience in the field demonstrate his ability to apply his skills in real-world scenarios. However, his score is slightly lower than the ideal, indicating some room for improvement.
 
 **KAIYA JENKINS**
 
-Kaiya Jenkins has a solid set of skills in cloud computing, deployment, and development, with a match rate of 11/21 required skills. Her 8 years of experience in the field show her ability to adapt to new technologies and tools. However, her skills in areas like containerization, CI/CD, and management are not as well-represented in her profile.
-
-**Verdict:**
-
-Zachary J. Wynton is the strongest candidate for the role, given his comprehensive set of skills and 8 years of experience in the field. His high match rate and demonstrated expertise in areas like containerization, orchestration, and management make him a more well-rounded candidate.
+Kaiya Jenkins has a solid set of skills in cloud computing, deployment, and development, with a match rate of 11/21 required skills. Her 8 years of experience suggest that she has a good understanding of the field, but her skills list is slightly more limited compared to Zachary J. Wynton's.
 
 [YOU] thanks, that's all
 [SESSION ENDED]

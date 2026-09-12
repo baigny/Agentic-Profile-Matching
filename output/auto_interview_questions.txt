@@ -74,15 +74,25 @@ Borderline candidates - improvement suggestions:
 [YOU] generate interview questions for the top candidate
 
 [AGENT]
-1. Can you walk us through your experience with PostgreSQL database performance optimization, and how you've applied that expertise in previous roles? We're looking for a strong understanding of database tuning and query optimization.
+1. Can you walk us through your experience with PostgreSQL database performance optimization? How have you optimized database performance in the past, and what tools or techniques have you used?
 
-2. You mentioned implementing a Jenkins-based CI/CD pipeline in your previous role, but we don't see any specific examples of how you've used Jenkins in your resume. Can you provide an example of a time when you successfully implemented a CI/CD pipeline, and how it improved your team's efficiency?
+(This question aims to probe the candidate's skills in PostgreSQL database management and performance optimization, which is a requirement for the job. It also allows the interviewer to assess the candidate's ability to analyze complex technical issues and develop effective solutions.)
 
-3. You claim to have experience with Docker and AWS, but we don't see any specific examples of how you've used these technologies in your previous roles. Can you describe a project where you used Docker to containerize an application, and how you deployed it using AWS?
+2. You mentioned in your resume that you have experience with Docker and AWS, but you didn't specify the exact versions or configurations you've worked with. Can you tell us about a specific project or experience where you had to troubleshoot a Docker or AWS-related issue?
 
-4. You mentioned that you've worked with the database team to optimize PostgreSQL database performance, but we don't see any specific examples of how you've contributed to this effort. Can you describe a time when you worked with a database team to optimize database performance, and what specific techniques or tools you used?
+(This question aims to clarify the candidate's experience with Docker and AWS, which is a nice-to-have skill for the job. It also allows the interviewer to assess the candidate's problem-solving skills and ability to troubleshoot complex technical issues.)
 
-5. You mentioned that you're familiar with containerization and orchestration tools such as Kubernetes or Apache Mesos, but we don't see any specific examples of how you've used these technologies in your previous roles. Can you describe a project where you used Kubernetes to deploy and manage a containerized application, and how it improved your team's efficiency?
+3. You mentioned in your resume that you have experience with continuous integration and continuous deployment (CI/CD) pipelines using tools like Jenkins or GitLab CI/CD. However, the job description mentions that we're looking for experience with Jenkins or GitLab CI/CD specifically. Can you tell us about a project where you implemented a CI/CD pipeline using one of these tools?
+
+(This question aims to probe the candidate's experience with CI/CD pipelines, which is a requirement for the job. It also allows the interviewer to assess the candidate's ability to implement and maintain CI/CD pipelines.)
+
+4. You mentioned in your resume that you have experience with asynchronous programming using libraries such as Celery or Zato. However, the job description doesn't mention anything about asynchronous programming. Can you tell us about a project where you used asynchronous programming, and how it improved the performance or scalability of the application?
+
+(This question aims to probe the candidate's experience with asynchronous programming, which is a nice-to-have skill for the job. It also allows the interviewer to assess the candidate's ability to analyze complex technical issues and develop effective solutions.)
+
+5. You mentioned in your resume that you have experience with collaboration tools such as Slack and Asana. However, the job description mentions that we're looking for experience with code reviews and mentoring junior engineers. Can you tell us about a time when you had to collaborate with a team to implement a new feature or fix a bug, and how you ensured that the code was reviewed and approved by the team?
+
+(This question aims to probe the candidate's experience with collaboration and code reviews, which is an important aspect of the job. It also allows the interviewer to assess the candidate's ability to work effectively with cross-functional teams and ensure that code is reviewed and approved.)
 
 [YOU] thanks, that's all
 [SESSION ENDED]

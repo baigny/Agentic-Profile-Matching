@@ -1,0 +1,46 @@
+=== SCENARIO: ambiguous_jd ===
+
+[JD]
+Need a software person.
+
+
+[AGENT]
+Round 1 - top 10 of the pool:
+
+1. AUSTIN W. PATEL - 41.6/100 (8 yrs, skills: [])
+   No required skills matched directly, ranked on semantic similarity alone, supported by the EDUCATION section(s). Candidate has 8 years of experience.
+2. KATHERINE "KAT" WILSON - 41.3/100 (14 yrs, skills: [])
+   No required skills matched directly, ranked on semantic similarity alone, supported by the EDUCATION section(s). Candidate has 14 years of experience.
+3. AYMAN KAMAL - 41.3/100 (0 yrs, skills: [])
+   No required skills matched directly, ranked on semantic similarity alone, supported by the EDUCATION, SOFTWARE ENGINEER section(s).
+4. KAIYA JENKINS - 41.1/100 (8 yrs, skills: [])
+   No required skills matched directly, ranked on semantic similarity alone, supported by the EDUCATION section(s). Candidate has 8 years of experience.
+5. KATHERINE L. WYNTON - 41.0/100 (10 yrs, skills: [])
+   No required skills matched directly, ranked on semantic similarity alone, supported by the EDUCATION section(s). Candidate has 10 years of experience.
+6. KAITLYN R. JENKINS - 40.9/100 (4 yrs, skills: [])
+   No required skills matched directly, ranked on semantic similarity alone, supported by the EDUCATION, EXPERIENCE section(s). Candidate has 4 years of experience.
+7. AUSTIN JENKINS - 40.9/100 (8 yrs, skills: [])
+   No required skills matched directly, ranked on semantic similarity alone, supported by the EDUCATION section(s). Candidate has 8 years of experience.
+8. AUSTIN KWAN - 40.8/100 (8 yrs, skills: [])
+   No required skills matched directly, ranked on semantic similarity alone, supported by the EDUCATION section(s). Candidate has 8 years of experience.
+9. KAYLA R. WYNTON - 40.8/100 (10 yrs, skills: [])
+   No required skills matched directly, ranked on semantic similarity alone, supported by the EDUCATION section(s). Candidate has 10 years of experience.
+10. KAHLIL JONES - 40.5/100 (10 yrs, skills: [])
+   No required skills matched directly, ranked on semantic similarity alone, supported by the EDUCATION section(s). Candidate has 10 years of experience.
+
+Borderline candidates - improvement suggestions:
+
+**KAYLA R. WYNTON**
+
+1. **Gain experience with cloud security**: Kayla's experience with cloud security is limited to her work with AWS and Azure. To become a stronger fit for the role, she could consider gaining experience with cloud security platforms such as Google Cloud Security Command Center, Microsoft Azure Security Center, or Amazon Web Services (AWS) Security Hub. This would help her develop a more comprehensive understanding of cloud security best practices and demonstrate her ability to implement and manage cloud security solutions.
+2. **Develop expertise in DevOps tools**: Kayla's experience with DevOps tools is limited to Jenkins and GitLab CI/CD. To become a stronger fit for the role, she could consider gaining experience with other DevOps tools such as Docker, Kubernetes, or Ansible. This would help her develop a more comprehensive understanding of DevOps practices and demonstrate her ability to implement and manage DevOps pipelines.
+3. **Pursue a certification in software development**: Kayla's experience with Python programming is limited to automation and scripting. To become a stronger fit for the role, she could consider pursuing a certification in software development such as the Certified Software Development Associate (CSDA) certification. This would help her develop a more comprehensive understanding of software development principles and demonstrate her ability to design and develop software applications.
+
+**KAHLIL JONES**
+
+1. **Gain experience with containerization**: While Kayla has experience with Kubernetes, her experience with containerization is limited to Docker. To become a stronger fit for the role, she could consider gaining experience with other containerization platforms such as Red Hat OpenShift or IBM Cloud Container Service. This would help her develop a more comprehensive understanding of containerization best practices and demonstrate her ability to implement and manage containerized applications.
+2. **Develop expertise in programming languages**: Kayla's experience with programming languages is limited to Java, Python, and C#. To become a stronger fit for the role, she could consider gaining experience with other programming languages such as JavaScript, Ruby, or Swift. This would help her develop a more comprehensive understanding of programming language principles and demonstrate her ability to design and develop software applications.
+3. **Pursue a certification in software development**: Kayla's experience with software development is limited to her work with cloud-based systems. To become a stronger fit for the role, she could consider pursuing a certification in software development such as the Certified Software Development Associate (CSDA) certification. This would help her develop a more comprehensive understanding of software development principles and demonstrate her ability to design and develop software applications.
+
+[YOU] thanks, that's all
+[SESSION ENDED]

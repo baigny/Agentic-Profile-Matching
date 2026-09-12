@@ -63,7 +63,7 @@ Borderline candidates - improvement suggestions:
 
 1. To strengthen their fit for the role, Kayden should gain experience with asynchronous programming using libraries such as Celery or Zato. Currently, their resume mentions experience with Python, but not specifically with asynchronous programming. Gaining this skill would make them a stronger candidate for the role, which mentions experience with asynchronous programming as a nice-to-have.
 2. Kayden's experience with PostgreSQL database management and performance optimization is mentioned, but not specifically with Django, which is the framework mentioned in the job description. Building experience with Django and PostgreSQL would make them a more competitive candidate for the role.
-3. Kayden's experience with containerization and orchestration tools such as Kubernetes or Apache Mesos is not explicitly mentioned in their resume. While they have experience with Docker and Kubernetes, gaining experience with other tools like Apache Mesos would make them a stronger candidate for the role.
+3. Kayden's experience with containerization and orchestration tools such as Kubernetes or Apache Mesos is not explicitly mentioned in their resume. While they have experience with Docker and Kubernetes, gaining experience with other tools such as Apache Mesos would make them a stronger candidate for the role.
 
 **ALEXANDER RYDER**
 
