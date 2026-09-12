@@ -1,19 +1,21 @@
 # Agent state machine
 
 ```mermaid
-stateDiagram-v2
-    [*] --> parse_jd
-    parse_jd --> extract_requirements
-    extract_requirements --> search_resumes
-    search_resumes --> rank_candidates
-    rank_candidates --> generate_report
-    generate_report --> human_feedback
+flowchart TD
+    START([START]) --> parse_jd[parse_jd]
+    parse_jd --> extract_requirements[extract_requirements]
+    extract_requirements --> search_resumes[search_resumes]
+    search_resumes --> rank_candidates[rank_candidates]
+    rank_candidates --> generate_report[generate_report]
+    generate_report --> human_feedback{{human_feedback}}
 
-    human_feedback --> extract_requirements: REFINE (new criteria, round resets to 1)
-    human_feedback --> generate_report: NEXT_ROUND (round 2 deep-dive / round 3 hire recommendation)
-    human_feedback --> human_feedback: COMPARE / EXPLAIN / INTERVIEW_QUESTIONS (answered inline, asks again)
-    human_feedback --> [*]: END (user satisfied / done)
+    human_feedback -->|REFINE| extract_requirements
+    human_feedback -->|NEXT_ROUND| generate_report
+    human_feedback -->|COMPARE / EXPLAIN /<br/>INTERVIEW_QUESTIONS| answered([answered inline])
+    answered -->|asks again| human_feedback
+    human_feedback -->|END| DONE([END])
 ```
+See "Node responsibilities" and "Screening rounds" below for what each edge label means in detail.
 
 ## Node responsibilities
 - **parse_jd** — takes the first human message as the job description, sets `round = 1`.
