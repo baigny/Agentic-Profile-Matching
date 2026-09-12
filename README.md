@@ -81,5 +81,5 @@ scenario. This is inference speed, not a hang — expected tradeoff for the no-c
 requirement. A GPU-backed Ollama host would cut this significantly.
 
 ## Demo video
-Manual step, not automated — 5-6 min screen capture showing a full 3-round screening,
-one refinement round-trip, and one explain-ranking question with agent reasoning visible.
+
+[Watch the demo](https://drive.google.com/file/d/1t7chF0tkciplJLxlP_3IG5Y-tRVyYboC/view?usp=sharing)
