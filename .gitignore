@@ -3,4 +3,5 @@ __pycache__/
 *.pyc
 chroma_db/
 output/*
+!output/auto_*.txt
 .env

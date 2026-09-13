@@ -1,0 +1,115 @@
+=== SCENARIO: refinement ===
+
+[JD]
+TITLE
+Senior Backend Engineer
+
+ABOUT
+We are seeking an experienced Senior Backend Engineer to join our development team and help drive the growth of our scalable, cloud-based platform. As a key member of our team, you will be responsible for designing, implementing, and maintaining our backend services, ensuring they are efficient, reliable, and secure.
+
+RESPONSIBILITIES
+
+* Design and develop high-performance, scalable backend services using Python and Django
+* Collaborate with the DevOps team to implement containerization using Docker and orchestrate deployments using AWS
+* Work with the database team to optimize PostgreSQL database performance and ensure data consistency
+* Participate in code reviews, provide constructive feedback, and mentor junior engineers
+* Troubleshoot and resolve complex technical issues, collaborating with cross-functional teams as needed
+* Develop and maintain documentation for backend services, including API documentation and technical guides
+
+REQUIREMENTS
+
+* At least 5 years of experience in backend development with a strong focus on Python and Django
+* Proficiency in PostgreSQL database management and performance optimization
+* Experience with Docker and AWS, with a strong understanding of containerization and cloud-based deployment
+* Strong problem-solving skills, with the ability to analyze complex technical issues and develop effective solutions
+* Excellent communication and collaboration skills, with the ability to work effectively with cross-functional teams
+
+NICE TO HAVE
+
+* Experience with asynchronous programming using libraries such as Celery or Zato
+* Familiarity with message queues such as RabbitMQ or Apache Kafka
+* Knowledge of containerization and orchestration tools such as Kubernetes or Apache Mesos
+* Experience with continuous integration and continuous deployment (CI/CD) pipelines using tools like Jenkins or GitLab CI/CD
+* Strong understanding of cloud security best practices and compliance requirements for AWS
+
+
+[AGENT]
+Round 1 - top 10 of the pool:
+
+1. ZACHARY J. WYNTON - 77.6/100 (8 yrs, skills: ['AWS', 'CD', 'CI', 'Containerization', 'Deployment', 'Development', 'Docker', 'GitLab', 'GitLab CI', 'Jenkins', 'Kubernetes', 'Python', 'containerization', 'deployment', 'management', 'orchestration'])
+   Matches 16/21 required skills (AWS, CD, CI, Containerization, Deployment, Development, Docker, GitLab, GitLab CI, Jenkins, Kubernetes, Python, containerization, deployment, management, orchestration), supported by the EXPERIENCE, SKILLS, SUMMARY section(s). Candidate has 8 years of experience.
+2. KAIYA JENKINS - 77.0/100 (8 yrs, skills: ['AWS', 'Deployment', 'Development', 'Django', 'Docker', 'GitLab', 'Jenkins', 'Kubernetes', 'PostgreSQL', 'Python', 'deployment'])
+   Matches 11/21 required skills (AWS, Deployment, Development, Django, Docker, GitLab, Jenkins, Kubernetes, PostgreSQL, Python, deployment), supported by the EXPERIENCE, SKILLS, SUMMARY section(s). Candidate has 8 years of experience.
+3. KATHERINE L. WYNTON - 74.2/100 (10 yrs, skills: ['AWS', 'CD', 'CI', 'Containerization', 'Deployment', 'Development', 'Docker', 'GitLab', 'GitLab CI', 'Jenkins', 'Kubernetes', 'containerization', 'deployment', 'management'])
+   Matches 14/21 required skills (AWS, CD, CI, Containerization, Deployment, Development, Docker, GitLab, GitLab CI, Jenkins, Kubernetes, containerization, deployment, management), supported by the SKILLS, SUMMARY section(s). Candidate has 10 years of experience.
+4. KYLE RYDER - 74.0/100 (10 yrs, skills: ['AWS', 'CD', 'CI', 'Containerization', 'Deployment', 'Development', 'Docker', 'GitLab', 'Jenkins', 'Kubernetes', 'containerization', 'deployment'])
+   Matches 12/21 required skills (AWS, CD, CI, Containerization, Deployment, Development, Docker, GitLab, Jenkins, Kubernetes, containerization, deployment), supported by the EXPERIENCE, SKILLS, SUMMARY section(s). Candidate has 10 years of experience.
+5. KAHLIL JONES - 72.3/100 (10 yrs, skills: ['AWS', 'CD', 'CI', 'Containerization', 'Deployment', 'Docker', 'GitLab', 'GitLab CI', 'Jenkins', 'Kubernetes', 'Python', 'containerization', 'deployment'])
+   Matches 13/21 required skills (AWS, CD, CI, Containerization, Deployment, Docker, GitLab, GitLab CI, Jenkins, Kubernetes, Python, containerization, deployment), supported by the EXPERIENCE, SKILLS, SUMMARY section(s). Candidate has 10 years of experience.
+6. AUSTIN REED - 69.6/100 (8 yrs, skills: ['CD', 'CI', 'Containerization', 'Deployment', 'Development', 'Docker', 'GitLab', 'GitLab CI', 'Jenkins', 'Kubernetes', 'containerization', 'deployment'])
+   Matches 12/21 required skills (CD, CI, Containerization, Deployment, Development, Docker, GitLab, GitLab CI, Jenkins, Kubernetes, containerization, deployment), supported by the EXPERIENCE, SKILLS, SUMMARY section(s). Candidate has 8 years of experience.
+7. KATHERINE "KAT" WILSON - 69.0/100 (14 yrs, skills: ['CD', 'CI', 'Communication', 'Containerization', 'Deployment', 'Development', 'Docker', 'Kubernetes', 'Optimization', 'PostgreSQL', 'containerization', 'deployment'])
+   Matches 12/21 required skills (CD, CI, Communication, Containerization, Deployment, Development, Docker, Kubernetes, Optimization, PostgreSQL, containerization, deployment), supported by the EXPERIENCE, SUMMARY section(s). Candidate has 14 years of experience.
+8. KAIDEN JENKINS - 66.1/100 (14 yrs, skills: ['AWS', 'Deployment', 'Development', 'Docker', 'Jenkins', 'Kubernetes', 'PostgreSQL', 'deployment'])
+   Matches 8/21 required skills (AWS, Deployment, Development, Docker, Jenkins, Kubernetes, PostgreSQL, deployment), supported by the EXPERIENCE, SUMMARY section(s). Candidate has 14 years of experience.
+9. KAYDEN L. VALENTINE - 65.8/100 (10 yrs, skills: ['AWS', 'Containerization', 'Deployment', 'Docker', 'Kubernetes', 'PostgreSQL', 'Python', 'containerization', 'deployment', 'management'])
+   Matches 10/21 required skills (AWS, Containerization, Deployment, Docker, Kubernetes, PostgreSQL, Python, containerization, deployment, management), supported by the SKILLS, SUMMARY section(s). Candidate has 10 years of experience.
+10. ALEXANDER RYDER - 61.8/100 (7 yrs, skills: ['AWS', 'Communication', 'Deployment', 'Development', 'Problem Solving', 'deployment'])
+   Matches 6/21 required skills (AWS, Communication, Deployment, Development, Problem Solving, deployment), supported by the EXPERIENCE, SUMMARY section(s). Candidate has 7 years of experience.
+
+Borderline candidates - improvement suggestions:
+
+**KAYDEN L. VALENTINE**
+
+1. To strengthen their fit for the role, Kayden should gain experience with asynchronous programming using libraries such as Celery or Zato. Currently, their resume mentions experience with Python, but not specifically with asynchronous programming. Gaining this skill would make them a stronger candidate for the role, which mentions experience with asynchronous programming as a nice-to-have.
+2. Kayden's experience with PostgreSQL database management and performance optimization is mentioned, but not specifically with Django, which is the framework mentioned in the job description. Building experience with Django and PostgreSQL would make them a more competitive candidate for the role.
+3. Kayden's experience with containerization and orchestration tools such as Kubernetes or Apache Mesos is not explicitly mentioned in their resume. While they have experience with Docker and Kubernetes, gaining experience with other tools like Apache Mesos would make them a stronger candidate for the role.
+
+**ALEXANDER RYDER**
+
+1. To strengthen their fit for the role, Alexander should gain experience with continuous integration and continuous deployment (CI/CD) pipelines using tools like Jenkins or GitLab CI/CD. Currently, their resume mentions experience with AWS services, but not specifically with CI/CD pipelines. Gaining this skill would make them a stronger candidate for the role, which mentions experience with CI/CD pipelines as a nice-to-have.
+2. Alexander's experience with Linux systems is mentioned, but not specifically with Python and Django, which are the programming languages and framework mentioned in the job description. Building experience with Python and Django would make them a more competitive candidate for the role.
+3. Alexander's experience with message queues such as RabbitMQ or Apache Kafka is not explicitly mentioned in their resume. While they have experience with AWS services, gaining experience with message queues would make them a stronger candidate for the role.
+
+[YOU] only consider candidates with 10+ years and AWS experience
+
+[AGENT]
+Round 1 - top 9 of the pool:
+
+1. KAHLIL JONES - 82.2/100 (10 yrs, skills: ['AWS', 'CD', 'CI', 'Cloud Security', 'Containerization', 'Docker', 'GitLab', 'GitLab CI', 'Jenkins', 'Kubernetes', 'Python', 'containerization', 'deployment'])
+   Matches 13/15 required skills (AWS, CD, CI, Cloud Security, Containerization, Docker, GitLab, GitLab CI, Jenkins, Kubernetes, Python, containerization, deployment), supported by the EXPERIENCE, SKILLS, SUMMARY section(s). Candidate has 10 years of experience.
+2. KATHERINE L. WYNTON - 79.5/100 (10 yrs, skills: ['AWS', 'CD', 'CI', 'Containerization', 'Docker', 'GitLab', 'GitLab CI', 'Jenkins', 'Kubernetes', 'containerization', 'deployment', 'management'])
+   Matches 12/15 required skills (AWS, CD, CI, Containerization, Docker, GitLab, GitLab CI, Jenkins, Kubernetes, containerization, deployment, management), supported by the EXPERIENCE, SKILLS, SUMMARY section(s). Candidate has 10 years of experience.
+3. KYLE RYDER - 77.8/100 (10 yrs, skills: ['AWS', 'CD', 'CI', 'Containerization', 'Docker', 'GitLab', 'Jenkins', 'Kubernetes', 'containerization', 'deployment'])
+   Matches 10/15 required skills (AWS, CD, CI, Containerization, Docker, GitLab, Jenkins, Kubernetes, containerization, deployment), supported by the EXPERIENCE, SKILLS, SUMMARY section(s). Candidate has 10 years of experience.
+4. KAYDEN L. VALENTINE - 70.8/100 (10 yrs, skills: ['AWS', 'Containerization', 'Docker', 'Kubernetes', 'PostgreSQL', 'Python', 'containerization', 'deployment', 'management'])
+   Matches 9/15 required skills (AWS, Containerization, Docker, Kubernetes, PostgreSQL, Python, containerization, deployment, management), supported by the EXPERIENCE, SKILLS, SUMMARY section(s). Candidate has 10 years of experience.
+5. KATHERINE "KAT" WILSON - 67.5/100 (14 yrs, skills: ['CD', 'CI', 'Containerization', 'Docker', 'Kubernetes', 'PostgreSQL', 'containerization', 'deployment'])
+   Matches 8/15 required skills (CD, CI, Containerization, Docker, Kubernetes, PostgreSQL, containerization, deployment), supported by the EXPERIENCE, SKILLS, SUMMARY section(s). Candidate has 14 years of experience.
+6. KAIDEN JENKINS - 66.8/100 (14 yrs, skills: ['AWS', 'Docker', 'Jenkins', 'Kubernetes', 'PostgreSQL', 'deployment'])
+   Matches 6/15 required skills (AWS, Docker, Jenkins, Kubernetes, PostgreSQL, deployment), supported by the EXPERIENCE, SKILLS, SUMMARY section(s). Candidate has 14 years of experience.
+7. KEVIN J. MULLEN - 62.5/100 (12 yrs, skills: ['AWS', 'Containerization', 'Kubernetes', 'Python', 'containerization', 'management'])
+   Matches 6/15 required skills (AWS, Containerization, Kubernetes, Python, containerization, management), supported by the EXPERIENCE, SKILLS, SUMMARY section(s). Candidate has 12 years of experience.
+8. KATHERINE WYLDE - 58.7/100 (10 yrs, skills: ['AWS', 'Docker', 'Kubernetes', 'Python', 'deployment'])
+   Matches 5/15 required skills (AWS, Docker, Kubernetes, Python, deployment), supported by the EXPERIENCE, SKILLS, SUMMARY section(s). Candidate has 10 years of experience.
+9. KAYLA R. WYNTON - 55.8/100 (10 yrs, skills: ['AWS', 'Cloud Security', 'Python', 'management'])
+   Matches 4/15 required skills (AWS, Cloud Security, Python, management), supported by the EXPERIENCE, SKILLS, SUMMARY section(s). Candidate has 10 years of experience.
+
+What changed: Newly in the top list: KEVIN J. MULLEN, KATHERINE WYLDE, KAYLA R. WYNTON. Dropped out of the top list: ZACHARY J. WYNTON, KAIYA JENKINS, AUSTIN REED, ALEXANDER RYDER. Re-ranked: KAHLIL JONES (#5 -> #1), KATHERINE L. WYNTON (#3 -> #2), KYLE RYDER (#4 -> #3), KAYDEN L. VALENTINE (#9 -> #4), KATHERINE "KAT" WILSON (#7 -> #5), KAIDEN JENKINS (#8 -> #6).
+
+Borderline candidates - improvement suggestions:
+
+**KATHERINE WYLDE**
+
+1. To strengthen her fit for the role, Katherine should gain experience with asynchronous programming using libraries such as Celery or Zato. This would help her develop skills in handling high-traffic applications and improve her ability to design and implement scalable backend services.
+2. Katherine should build experience with continuous integration and continuous deployment (CI/CD) pipelines using tools like Jenkins or GitLab CI/CD. This would enable her to automate testing, deployment, and monitoring of her backend services, ensuring faster time-to-market and reduced downtime.
+3. Katherine should pursue a certification in cloud security best practices, such as the AWS Certified Security - Specialty certification. This would demonstrate her expertise in securing cloud-based applications and ensure she meets the additional requirement for AWS experience.
+
+**KAYLA R. WYNTON**
+
+1. To strengthen her fit for the role, Kayla should focus on developing her skills in Python and Django, particularly in areas such as asynchronous programming and web development frameworks. This would help her improve her ability to design and implement high-performance, scalable backend services.
+2. Kayla should build experience with PostgreSQL database performance optimization and ensure she has a strong understanding of database design and schema management. This would enable her to optimize database performance and ensure data consistency in her backend services.
+3. Kayla should pursue a certification in cloud security, such as the AWS Certified Developer - Associate certification. This would demonstrate her expertise in cloud-based development and ensure she meets the additional requirement for AWS experience.
+
+[YOU] thanks, that's all
+[SESSION ENDED]
